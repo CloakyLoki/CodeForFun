@@ -10,24 +10,19 @@ Output: "fl"
 
 public class LongestCommonPrefix {
     public static void main(String[] args) {
-    String[] strs = {"flower","flow","flight"};
+        String[] strs = {"flower", "flow", "flight"};
         System.out.println(longestCommonPrefix(strs));
     }
 
     public static String longestCommonPrefix(String[] strs) {
-        String tempPrefix = String.valueOf(strs[0].charAt(0));
-        int counter = 1;
+        if (strs.length == 0) return "";
+        String prefix = strs[0];
         for (int i = 1; i < strs.length; i++) {
-            if (strs[i].startsWith(tempPrefix) && counter != strs.length - 1){
-                counter++;
-
-            } else {
-                break;
-  //              return tempPrefix;
+            while (strs[i].indexOf(prefix) != 0) {
+                prefix = prefix.substring(0, prefix.length() - 1);
             }
-  //          if (counter)
-        }
 
-        return null;
+        }
+        return prefix;
     }
 }
