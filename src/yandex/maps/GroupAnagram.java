@@ -1,4 +1,4 @@
-package leetcode.strings;
+package yandex.maps;
 
 import java.util.ArrayList;
 import java.util.Arrays;
