@@ -33,7 +33,5 @@ public class SubTree {
             this.right = right;
         }
     }
-    public boolean isSubtree(TreeNode root, TreeNode subRoot) {
 
- }
 }
