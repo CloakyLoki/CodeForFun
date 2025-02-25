@@ -12,7 +12,7 @@ Input: nums = [3,2,3]
 Output: 3
 
 Example 2:
-Input: nums = [2,2,1,1,1,2,2]
+Input: nums = [2, 2, 1, 1, 1, 2, 2]
 Output: 2
  */
 public class MajorityElement {
@@ -26,13 +26,13 @@ public class MajorityElement {
     // HashMap
     public int majorityElement2(int[] nums) {
         Map<Integer, Integer> myMap = new HashMap<>();
-        int ret=0;
-        for (int num: nums) {
+        int ret = 0;
+        for (int num : nums) {
             if (!myMap.containsKey(num))
                 myMap.put(num, 1);
             else
-                myMap.put(num, myMap.get(num)+1);
-            if (myMap.get(num)>nums.length/2) {
+                myMap.put(num, myMap.get(num) + 1);
+            if (myMap.get(num) > nums.length / 2) {
                 ret = num;
                 break;
             }
